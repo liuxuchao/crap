@@ -94,50 +94,62 @@
               <li <?php if('add' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/admin/add">权限管理</a></li>
             </ul>
           </li>
-		  <li class="sub-menu  dcjq-parent-li">
+		      <li class="sub-menu  dcjq-parent-li">
             <a href="javascript:;" <?php if('Users' == $controllerName or 'UsersBalanceLog' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
              <i class="icon-user"></i>
              <span>下游供货商管理</span>
-           </a>
-           <ul class="sub  dcjq-parent-li">
-            <li <?php if('index' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/index" >下游供货商列表</a></li>
-			 <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
-            <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
-          </ul>
-        </li>
-        <li class="sub-menu  dcjq-parent-li">
-          <a href="javascript:;" <?php if('UsersPriceConfig' == $controllerName or 'Goods' == $controllerName or 'GoodsDiscount' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
-            <i class="icon-btc"></i>
-            <span>商品管理</span>
-          </a>
-          <ul class="sub">
-            <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
-            <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
-          </ul>
-        </li>
-		<li class="sub-menu  dcjq-parent-li">
-          <a href="javascript:;" <?php if('UsersPriceConfig' == $controllerName or 'Goods' == $controllerName or 'GoodsDiscount' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
-            <i class="icon-btc"></i>
-            <span>上游接口管理</span>
-          </a>
-          <ul class="sub">
-            <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
-            <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
-          </ul>
-        </li>
-        <li class="sub-menu">
-          <a href="javascript:;" <?php if('SmsLog' == $controllerName or 'LoginLog' == $controllerName or 'RecommendStatistical' == $controllerName or 'ResumeSearchLog' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
-            <i class=" icon-pencil"></i>
-            <span>日志</span>
-          </a>
-          <ul class="sub">
-            <li <?php if('index' == $actionName and 'SmsLog' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/SmsLog/index">短信发送日志</a></li>
-            <li <?php if('index' == $actionName and 'LoginLog' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/LoginLog/index">登陆日志</a></li>
-            <li <?php if('index' == $actionName and 'RecommendStatistical' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/RecommendStatistical/index">上游供货商请求日志</a></li>
-            <li <?php if('index' == $actionName and 'ResumeSearchLog' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/ResumeSearchLog/index">下游供应商调用日志</a></li>
-          </ul>
-        </li>
-		<li class="sub-menu  dcjq-parent-li" >
+            </a>
+            <ul class="sub  dcjq-parent-li">
+              <li <?php if('index' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/index" >下游供货商列表</a></li>
+  			      <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
+              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu  dcjq-parent-li">
+            <a href="javascript:;" <?php if('UsersPriceConfig' == $controllerName or 'Goods' == $controllerName or 'GoodsDiscount' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
+              <i class="icon-btc"></i>
+              <span>商品管理</span>
+            </a>
+            <ul class="sub">
+              <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
+              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+            </ul>
+          </li>
+		      <li class="sub-menu  dcjq-parent-li">
+            <a href="javascript:;" <?php if('UsersPriceConfig' == $controllerName or 'Goods' == $controllerName or 'GoodsDiscount' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
+              <i class="icon-btc"></i>
+              <span>上游接口管理</span>
+            </a>
+            <ul class="sub">
+              <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
+              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" <?php if('SmsLog' == $controllerName or 'LoginLog' == $controllerName or 'RecommendStatistical' == $controllerName or 'ResumeSearchLog' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
+              <i class=" icon-pencil"></i>
+              <span>日志</span>
+            </a>
+            <ul class="sub">
+              <li <?php if('index' == $actionName and 'SmsLog' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/SmsLog/index">短信发送日志</a></li>
+              <li <?php if('index' == $actionName and 'LoginLog' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/LoginLog/index">登陆日志</a></li>
+              <li <?php if('index' == $actionName and 'RecommendStatistical' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/RecommendStatistical/index">上游供货商请求日志</a></li>
+              <li <?php if('index' == $actionName and 'ResumeSearchLog' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/ResumeSearchLog/index">下游供应商调用日志</a></li>
+            </ul>
+          </li>
+		      <li class="sub-menu  dcjq-parent-li" >
+            <a href="javascript:;"  <?php if('Version' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
+              <i class="icon-flag-alt"></i>
+              <span>财务管理</span>
+            </a>
+            <ul class="sub">
+              <li <?php if('index' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Version/index" >订单利润管理</a></li>
+              <li <?php if('add' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Version/add">上游对账管理</a></li>
+              <li <?php if('add' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Version/add">下游对账管理</a></li>
+              <li <?php if('add' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Version/add">交易记录管理</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu  dcjq-parent-li" >
              <a href="javascript:;"  <?php if('Version' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
               <i class="icon-flag-alt"></i>
               <span>系统设置</span>
