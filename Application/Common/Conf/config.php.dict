@@ -1,0 +1,121 @@
+<?php
+
+return array(
+    //配置模块
+    'MODULE_ALLOW_LIST' => array('Home','Admin','Api', 'Lie100', 'DaemonApi'),
+    'DEFAULT_MODULE'    => 'Home', //默认模块
+    
+    // 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE  模式); 3 (兼容模式)  默认为PATHINFO 模式
+	'URL_MODEL' =>  1,
+    
+    //注册新的命名空间
+    'AUTOLOAD_NAMESPACE' => array(
+        'Application'    => APP_PATH,
+    ),
+    'APP_HOST' => 'www.rencaiwa.com',
+    'API_HOST' => 'api.rencaiwa.com',
+    'UPLOAD_PATH' => './Upload/',
+
+    'ENVIROMENT' => 1, //1为开发环境  2：为测试环境
+    'TEST_HOST' => '122.49.22.242:8082',
+    'RESUME_SERVER_HOST' => '10.18.99.137:9200',  //用于搜索的服务器 测试环境 为 10.18.99.137:9200   正式环境为 192.168.6.31:9200
+    'RESUME_SERVER_INDEX' => 'uu_tuijian_test',          //用于搜索的索引名称 ：测试环境 为 uu_tuijian_test  正式环境为 uu_tuijian
+    'PARTICIPLES_CORE_SERVER_HOST' => '127.0.0.1:9200',  //在拼词操作 核心词库进行分词时使用，正式环境是127.0.0.1  测试机使用的是192.168.6.171
+    'PARTICIPLES_CORE_INDEX' => 'uu_tuijian_core_participles',  //在拼词操作 核心词库进行分词时
+    'JOB_INDEX_SERVER_HOST'=>'127.0.0.1:9200',  //测正式环境下 使用6.31 es  测试环境下使用 127.0.0.1
+    
+    'IS_IAP'=>0, #是否允许充值  0：不允许  1：允许  用于接口返回去屏蔽 是否开启充值功能
+    
+    //静态文件版本号码
+    'CSS_VERSION' => 1,
+    'JS_VERSION'  => 1,
+    
+    //模板标签配置
+    'TMPL_L_DELIM' => '<{',
+    'TMPL_R_DELIM' => '}>',
+    
+    //加密用的KEY
+    'ENCRYPT_KEY'       => 'cSaZ8ZEJAnvZmfae5sKSf1g3CPsEeeq0Iw==',
+    'ENCRYPT_PROMOTE_KEY' => '526a39f8c9001b15903d43253fec7129', //推广使用的生成密码用的KEY，追加到明文密码后生成MD5
+    'PASSWORD_KEY'      => 'cSaZ8ZEJAnvZmfae5sKSf1g3CPsEeeq0Iw==', //生成密码用的KEY，追加到明文密码后生成MD5
+    'SEND_MSM_TOKEN'    => '0xbefd1c9b00050f02', //发送短信的token明文
+    'AUTH_CODE_LENGTH'  => 6, //验证码长度
+    'COLLECT_TOKEN'     => 'KeepMoving![root@localhost', //和采集通讯时用到的标识，明文。
+    
+    //登录状态数据在Redis中存储的有效期，单位：秒。不代表登录有效期。
+    'LOGIN_STATUS_DATA_TTL' => 600,
+    
+    //密码长度配置
+    'PASSWORD_MAX_LENGTH' => 16,
+    'PASSWORD_MIN_LENGTH' => 6,
+    
+    //推荐中职位的限制个数
+    'RECOMMEND_JOB_LIMIT'=>5,
+    //邀请人数限制
+    'INVITE_NUMBER_LIMIT'=>30,
+
+    'LIMIT_MAX_PAGE_SIZE'=>20,      #分页最大数，当分页请求数量大于10时使用该值
+    
+    //发送短信平台
+    'SEND_SMS_TYPE'=>1,     // 1:SendCloud   2:数米
+    //简历数据接口
+    'RESUME_API'       => 'http://192.168.6.181/resume/api/content',
+    'RESUME_API_TOKEN' =>'c0695f801d695365247b045daa07c034',
+    'RESUME_EXPIRY'    => 86400, //简历在redis中的有效期，单位：秒。
+    'DICT_EXPIRY'    => 86400,      //字典redis中的有效期，单位：秒。
+    'LEXICON_EXPIRY'    => 86400,      //词库redis中的有效期，单位：秒。
+    'TIMESTAMP18'    => 915120000,      //年龄18岁时间戳 ，用于搜索时候判断是否大于18岁过滤,2017-1-2 添加1999-01-01 的时间戳。
+    
+    'JOB_ORIGIN_LIST_TIME'=>86400,//职位缓存过期时间
+
+    //获取简历 再来一波 接口地址
+    'PULL_RESUME_API' => 'http://192.168.6.176:8080/recommend/find',
+
+    'RESUME_LIST_API_ADDRESS' =>'http://10.18.99.57:8089/search/rcw/result',    //测试地址 搜索简历列表
+    'RESUME_DETAIL_API_ADDRESS' =>'http://10.18.99.57:8089/resume/rcw/detail',  //测试地址 简历详情
+    'RESUME_DETAIL_API_ADDRESS_PERSONID' =>'http://10.18.99.57:8089/resume/person',  //测试地址 简历详情 通过person查询
+    'RESUME_RECOMMEND_API_ADDRESS' =>'http://10.18.99.57:8089/search/rcw/recommend',  //测试地址 推荐简历
+    'JOB_PARTICIPLES_API_ADDRESS' =>'http://10.18.99.57:8089/job/analyze',  //测试地址 获取职位的分词
+    'JOB_INFO_API_ADDRESS' =>'http://10.18.99.57:8089/job/info',  //测试地址 获取职位详情信息
+    'COMPANY_INFO_API_ADDRESS' =>'http://10.18.99.57:8089/job/company',  //测试地址 获取公司详情信息
+    //邮件系统
+    'EMAIL_VERIFY_PAI' =>'http://192.168.6.30:8080/EmailResume/verify', //邮件系统  验证 接口地址
+    'EMAIL_FETCH_PAI' =>'http://192.168.6.30:8080/EmailResume/email/fetch', //邮件系统  获取邮件列表接口地址
+    'TEST_FEND_MOBILE_LIST' =>[
+        ['mobile'=>'13051914561','name'=>'杨艳波'],
+        ['mobile'=>'15210454902','name'=>'孙素玲'],
+        ['mobile'=>'18810366964','name'=>'张潇澜'],
+        ['mobile'=>'15011327591','name'=>'吴朋'],
+        ['mobile'=>'13522658310','name'=>'刘徐超'],
+        ['mobile'=>'15810925865','name'=>'钟宇诚'],
+        ['mobile'=>'13641154657','name'=>'董光明'],
+        ['mobile'=>'18500639343','name'=>'秦川'],
+        ['mobile'=>'18311157498','name'=>'张鹏'],
+        ['mobile'=>'18701185546','name'=>'郑申亨'],
+        ['mobile'=>'15369297656','name'=>'郑自强'],
+        ['mobile'=>'18201037938','name'=>'马亮'],
+    ],
+    //项目域名
+    'REBOOT_SHORT_URL'   => '/Home/Html/read_uu.html',//一张图看懂UU机器人 url地址
+    
+    //阿里云cdn
+    "ALIYUN_CDN" => [
+        'accessKeyId' => 'F4toeLZM1Pmjm51x',
+        'accessKeySecret' => 'eHmaPlFghgXCI9kvcLgThgJh8eEhLy',
+        'endpoint' => 'oss-cn-beijing.aliyuncs.com',
+        'bucket' => 'qdcdn'
+    ],
+
+    //加载配置文件
+    'LOAD_EXT_CONFIG' => 'sms,uurecommend_db,uurecommend_mongodb,redis,rediskey,channel,invite,getui,source_mongo_mapping,payment,upload_file,rabbitmq,autoverify,constant,promote,parseJobList',
+    'SEE_RESUME_TIME'=>30,//查看简历联系方式最大次数
+    'SEE_RESUME_PRICE'=>20,//查看联系方式每次消耗的蛙币
+    'RE_BIND'=>'uu_recommend:re_bind_develop',
+    'API_VERSSSION'=>'2.0.0',//API版本号
+    
+    //进程停止发送短信通知的手机号
+    'CHECK_PYTHON_SEND_FOR_MOBILE_LIST' =>[
+        '13522658310',
+        #'15810925865',
+    ],
+);

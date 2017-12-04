@@ -1,0 +1,78 @@
+[ 2017-11-27T20:42:18+08:00 ] 127.0.0.1 /Admin/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016123s ]
+NOTIC: [2] mdecrypt_generic(): An empty string was passed F:\xampp\htdocs\crap\ThinkPHP\Library\Org\Util\AES.class.php 第 51 行.
+NOTIC: [2] preg_match(): Null byte in regex F:\xampp\htdocs\crap\ThinkPHP\Library\Org\Util\AES.class.php 第 80 行.
+NOTIC: [2048] Declaration of Application\BaseModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) F:\xampp\htdocs\crap\Application\BaseModel.class.php 第 12 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012798s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001719s ]
+
+[ 2017-11-27T20:42:29+08:00 ] 127.0.0.1 /Admin/Login/doLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+NOTIC: [2] mdecrypt_generic(): An empty string was passed F:\xampp\htdocs\crap\ThinkPHP\Library\Org\Util\AES.class.php 第 51 行.
+NOTIC: [2] preg_match(): Null byte in regex F:\xampp\htdocs\crap\ThinkPHP\Library\Org\Util\AES.class.php 第 80 行.
+NOTIC: [2048] Declaration of Application\BaseModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) F:\xampp\htdocs\crap\Application\BaseModel.class.php 第 12 行.
+SQL: SELECT * FROM `crap_admin_users` WHERE `name` = 'admin' AND `password` = '2e88327de2f97110f6c5f97be61a25b8' LIMIT 1   [ RunTime:0.0356s ]
+
+[ 2017-11-27T20:42:29+08:00 ] 127.0.0.1 /Admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+NOTIC: [2] mdecrypt_generic(): An empty string was passed F:\xampp\htdocs\crap\ThinkPHP\Library\Org\Util\AES.class.php 第 51 行.
+NOTIC: [2] preg_match(): Null byte in regex F:\xampp\htdocs\crap\ThinkPHP\Library\Org\Util\AES.class.php 第 80 行.
+NOTIC: [2048] Declaration of Application\BaseModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) F:\xampp\htdocs\crap\Application\BaseModel.class.php 第 12 行.
+NOTIC: [8] Undefined variable: userCount F:\xampp\htdocs\crap\Application\Admin\Controller\IndexController.class.php 第 36 行.
+NOTIC: [8] Undefined variable: channelCount F:\xampp\htdocs\crap\Application\Admin\Controller\IndexController.class.php 第 37 行.
+NOTIC: [8] Undefined variable: loginCount F:\xampp\htdocs\crap\Application\Admin\Controller\IndexController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: recommendJobCount F:\xampp\htdocs\crap\Application\Admin\Controller\IndexController.class.php 第 46 行.
+NOTIC: [8] Undefined variable: recommendResumeCount F:\xampp\htdocs\crap\Application\Admin\Controller\IndexController.class.php 第 47 行.
+NOTIC: [8] Undefined variable: invitBySmsCount F:\xampp\htdocs\crap\Application\Admin\Controller\IndexController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: receiveCount F:\xampp\htdocs\crap\Application\Admin\Controller\IndexController.class.php 第 49 行.
+NOTIC: [8] Undefined variable: autoReceiveCount F:\xampp\htdocs\crap\Application\Admin\Controller\IndexController.class.php 第 50 行.
+NOTIC: [8] Undefined variable: rejectCount F:\xampp\htdocs\crap\Application\Admin\Controller\IndexController.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined variable: currentPage F:\xampp\htdocs\crap\Runtime\Cache\Admin\53ba6b9177d3b17ee3b89aee36ab9c4d.php 第 10 行.
+NOTIC: [8] Use of undefined constant today - assumed 'today' F:\xampp\htdocs\crap\Runtime\Cache\Admin\53ba6b9177d3b17ee3b89aee36ab9c4d.php 第 182 行.
+NOTIC: [8] Use of undefined constant yesterday - assumed 'yesterday' F:\xampp\htdocs\crap\Runtime\Cache\Admin\53ba6b9177d3b17ee3b89aee36ab9c4d.php 第 183 行.
+NOTIC: [8] Use of undefined constant week - assumed 'week' F:\xampp\htdocs\crap\Runtime\Cache\Admin\53ba6b9177d3b17ee3b89aee36ab9c4d.php 第 184 行.
+NOTIC: [8] Use of undefined constant month - assumed 'month' F:\xampp\htdocs\crap\Runtime\Cache\Admin\53ba6b9177d3b17ee3b89aee36ab9c4d.php 第 185 行.
+NOTIC: [8] Use of undefined constant all - assumed 'all' F:\xampp\htdocs\crap\Runtime\Cache\Admin\53ba6b9177d3b17ee3b89aee36ab9c4d.php 第 186 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001607s ]
+
+[ 2017-11-27T20:42:30+08:00 ] 127.0.0.1 /Admin/img/favicon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+

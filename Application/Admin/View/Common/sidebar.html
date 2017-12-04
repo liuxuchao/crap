@@ -1,0 +1,81 @@
+      <!--sidebar start-->
+      <aside>
+        <div id="sidebar"  class="nav-collapse ">
+          <!-- sidebar menu start-->
+          <ul class="sidebar-menu  dcjq-parent-li" id="nav-accordion">
+            <li>
+              <a href="/Admin/Index" <if condition="'Index' eq $controllerName" >class="active dcjq-parent"</if>>
+                <i class="icon-dashboard"></i>
+                <span>主面板</span>
+              </a>
+            </li>
+
+            <li class="sub-menu  dcjq-parent-li" >
+             <a href="javascript:;"  <if condition="'Admin' eq $controllerName" >class="active dcjq-parent"</if>>
+              <i class="icon-laptop"></i>
+              <span>角色/权限管理</span>
+            </a>
+            <ul class="sub">
+              <li <if condition="'index' eq $actionName" >class="active"</if>><a href="/Admin/Admin" >管理员列表</a></li>
+              <li <if condition="'add' eq $actionName" >class="active"</if>><a href="/Admin/admin/add">角色管理</a></li>
+              <li <if condition="'add' eq $actionName" >class="active"</if>><a href="/Admin/admin/add">权限管理</a></li>
+            </ul>
+          </li>
+		  <li class="sub-menu  dcjq-parent-li">
+            <a href="javascript:;" <if condition="'Users' eq $controllerName or 'UsersBalanceLog' eq $controllerName" >class="active dcjq-parent"</if>>
+             <i class="icon-user"></i>
+             <span>下游供货商管理</span>
+           </a>
+           <ul class="sub  dcjq-parent-li">
+            <li <if condition="'index' eq $actionName" >class="active"</if>><a href="/Admin/Users/index" >下游供货商列表</a></li>
+			 <li <if condition="'index' eq $actionName and 'Goods' eq $controllerName" >class="active"</if>><a href="/Admin/Goods">产品列表</a></li>
+            <li <if condition="'discountList' eq $actionName" >class="active"</if>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+          </ul>
+        </li>
+        <li class="sub-menu  dcjq-parent-li">
+          <a href="javascript:;" <if condition="'UsersPriceConfig' eq $controllerName or 'Goods' eq $controllerName or 'GoodsDiscount' eq $controllerName" >class="active dcjq-parent"</if>>
+            <i class="icon-btc"></i>
+            <span>商品管理</span>
+          </a>
+          <ul class="sub">
+            <li <if condition="'index' eq $actionName and 'Goods' eq $controllerName" >class="active"</if>><a href="/Admin/Goods">产品列表</a></li>
+            <li <if condition="'discountList' eq $actionName" >class="active"</if>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+          </ul>
+        </li>
+		<li class="sub-menu  dcjq-parent-li">
+          <a href="javascript:;" <if condition="'UsersPriceConfig' eq $controllerName or 'Goods' eq $controllerName or 'GoodsDiscount' eq $controllerName" >class="active dcjq-parent"</if>>
+            <i class="icon-btc"></i>
+            <span>上游接口管理</span>
+          </a>
+          <ul class="sub">
+            <li <if condition="'index' eq $actionName and 'Goods' eq $controllerName" >class="active"</if>><a href="/Admin/Goods">产品列表</a></li>
+            <li <if condition="'discountList' eq $actionName" >class="active"</if>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+          </ul>
+        </li>
+        <li class="sub-menu">
+          <a href="javascript:;" <if condition="'SmsLog' eq $controllerName or 'LoginLog' eq $controllerName or 'RecommendStatistical' eq $controllerName or 'ResumeSearchLog' eq $controllerName" >class="active dcjq-parent"</if>>
+            <i class=" icon-pencil"></i>
+            <span>日志</span>
+          </a>
+          <ul class="sub">
+            <li <if condition="'index' eq $actionName and 'SmsLog' eq $controllerName" >class="active"</if>><a href="/Admin/SmsLog/index">短信发送日志</a></li>
+            <li <if condition="'index' eq $actionName and 'LoginLog' eq $controllerName" >class="active"</if>><a href="/Admin/LoginLog/index">登陆日志</a></li>
+            <li <if condition="'index' eq $actionName and 'RecommendStatistical' eq $controllerName" >class="active"</if>><a href="/Admin/RecommendStatistical/index">上游供货商请求日志</a></li>
+            <li <if condition="'index' eq $actionName and 'ResumeSearchLog' eq $controllerName" >class="active"</if>><a href="/Admin/ResumeSearchLog/index">下游供应商调用日志</a></li>
+          </ul>
+        </li>
+		<li class="sub-menu  dcjq-parent-li" >
+             <a href="javascript:;"  <if condition="'Version' eq $controllerName" >class="active dcjq-parent"</if>>
+              <i class="icon-flag-alt"></i>
+              <span>系统设置</span>
+            </a>
+            <ul class="sub">
+              <li <if condition="'index' eq $actionName" >class="active"</if>><a href="/Admin/Version/index" >供应商菜单管理</a></li>
+              <li <if condition="'add' eq $actionName" >class="active"</if>><a href="/Admin/Version/add">基本设置</a></li>
+              <li <if condition="'add' eq $actionName" >class="active"</if>><a href="/Admin/Version/add">字典管理</a></li>
+            </ul>
+          </li>
+      </ul>
+      <!-- sidebar menu end-->
+    </div>
+  </aside>
