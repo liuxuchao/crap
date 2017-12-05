@@ -27,11 +27,14 @@ define('RUNTIME_PATH','../Runtime/');
 define('APP_PATH','../Application/');
 
 // 引入ThinkPHP入口文件
-try {
+// 
+// 
+$frameWorkDir = dirname( dirname(__FILE__) );
+require $frameWorkDir . '/ThinkPHP/ThinkPHP.php';
+//try {
     // 引入ThinkPHP入口文件
-    $frameWorkDir = dirname( dirname(__FILE__) );
-    require $frameWorkDir . '/ThinkPHP/ThinkPHP.php';
-} catch (Exception $exc) {
+    
+//} catch (Exception $exc) {
     //调试模式输出错误信息
 	/*
     if ( APP_DEBUG ) {
@@ -56,8 +59,8 @@ try {
     error_log($message, 3, $destination);
     */
     //返回系统错误
-    echo json_encode(['error_code'=>999, 'msg'=>'系统错误', 'data'=>[]]);
-    return;
-}
+    //echo json_encode(['error_code'=>999, 'msg'=>'系统错误', 'data'=>[]]);
+    //return;
+//}
 
 // 亲^_^ 后面不需要任何代码了 就是如此简单

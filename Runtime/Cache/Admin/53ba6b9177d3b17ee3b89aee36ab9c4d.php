@@ -90,8 +90,8 @@
             </a>
             <ul class="sub">
               <li <?php if('index' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Admin" >管理员列表</a></li>
-              <li <?php if('add' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/admin/add">角色管理</a></li>
-              <li <?php if('add' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/admin/add">权限管理</a></li>
+              <li <?php if('add' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Role">角色管理</a></li>
+              <li <?php if('add' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Power">权限管理</a></li>
             </ul>
           </li>
 		      <li class="sub-menu  dcjq-parent-li">
@@ -101,28 +101,28 @@
             </a>
             <ul class="sub  dcjq-parent-li">
               <li <?php if('index' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/index" >下游供货商列表</a></li>
-  			      <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
+  			      <li <?php if('index' == $actionName and 'Supplier' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
               <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
             </ul>
           </li>
           <li class="sub-menu  dcjq-parent-li">
             <a href="javascript:;" <?php if('UsersPriceConfig' == $controllerName or 'Goods' == $controllerName or 'GoodsDiscount' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
-              <i class="icon-btc"></i>
+              <i class="icon-shopping-cart"></i>
               <span>商品管理</span>
             </a>
             <ul class="sub">
               <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
-              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods/getGivingLog" >产品分类</a></li>
             </ul>
           </li>
 		      <li class="sub-menu  dcjq-parent-li">
-            <a href="javascript:;" <?php if('UsersPriceConfig' == $controllerName or 'Goods' == $controllerName or 'GoodsDiscount' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
+            <a href="javascript:;" <?php if('UsersPriceConfig' == $controllerName or 'Interface' == $controllerName or 'GoodsDiscount' == $controllerName): ?>class="active dcjq-parent"<?php endif; ?>>
               <i class="icon-btc"></i>
               <span>上游接口管理</span>
             </a>
             <ul class="sub">
-              <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
-              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+              <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">上游接口列表</a></li>
+              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >上游接口分类</a></li>
             </ul>
           </li>
           <li class="sub-menu">

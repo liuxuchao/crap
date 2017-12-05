@@ -28,13 +28,13 @@
             </a>
             <ul class="sub  dcjq-parent-li">
               <li <if condition="'index' eq $actionName" >class="active"</if>><a href="/Admin/Users/index" >下游供货商列表</a></li>
-  			      <li <if condition="'index' eq $actionName and 'Goods' eq $controllerName" >class="active"</if>><a href="/Admin/Goods">产品列表</a></li>
+  			      <li <if condition="'index' eq $actionName and 'Supplier' eq $controllerName" >class="active"</if>><a href="/Admin/Goods">产品列表</a></li>
               <li <if condition="'discountList' eq $actionName" >class="active"</if>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
             </ul>
           </li>
           <li class="sub-menu  dcjq-parent-li">
             <a href="javascript:;" <if condition="'UsersPriceConfig' eq $controllerName or 'Goods' eq $controllerName or 'GoodsDiscount' eq $controllerName" >class="active dcjq-parent"</if>>
-              <i class="icon-btc"></i>
+              <i class="icon-shopping-cart"></i>
               <span>商品管理</span>
             </a>
             <ul class="sub">
@@ -43,13 +43,13 @@
             </ul>
           </li>
 		      <li class="sub-menu  dcjq-parent-li">
-            <a href="javascript:;" <if condition="'UsersPriceConfig' eq $controllerName or 'Goods' eq $controllerName or 'GoodsDiscount' eq $controllerName" >class="active dcjq-parent"</if>>
+            <a href="javascript:;" <if condition="'UsersPriceConfig' eq $controllerName or 'Interface' eq $controllerName or 'GoodsDiscount' eq $controllerName" >class="active dcjq-parent"</if>>
               <i class="icon-btc"></i>
               <span>上游接口管理</span>
             </a>
             <ul class="sub">
-              <li <if condition="'index' eq $actionName and 'Goods' eq $controllerName" >class="active"</if>><a href="/Admin/Goods">产品列表</a></li>
-              <li <if condition="'discountList' eq $actionName" >class="active"</if>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+              <li <if condition="'index' eq $actionName and 'Goods' eq $controllerName" >class="active"</if>><a href="/Admin/Goods">上游接口列表</a></li>
+              <li <if condition="'discountList' eq $actionName" >class="active"</if>><a href="/Admin/Users/getGivingLog" >上游接口分类</a></li>
             </ul>
           </li>
           <li class="sub-menu">

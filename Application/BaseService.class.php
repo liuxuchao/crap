@@ -34,7 +34,7 @@ abstract class BaseService
         if ( empty($data) || !is_array($data) ) {
             return false;
         }
-        
+
         return $this->model->add($data);
     }
     

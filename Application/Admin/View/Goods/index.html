@@ -29,20 +29,38 @@
                           <table class="table table-striped table-advance table-hover">
                               <thead>
                               <tr>
-                                  <th><i class="icon-bullhorn"></i> 商品名</th>
-                                  <th class="hidden-phone"><i class="icon-question-sign"></i> 昵称</th>
+                                  <th><i class="icon-shopping-cart"></i> 商品名称</th>
+                                  <th><i class="icon-credit-card"></i> 商品别名</th>
+                                  <th><i class="icon-move"></i> 商品范围</th>
+                                  <th><i class="icon-circle-arrow-up"></i> 充值限制</th>
+                                  <th><i class="icon-group"></i> 运营商</th>
+                                  <th><i class="icon-th-large"></i> 包体大小</th>
+                                  <th><i class="icon-calendar"></i> 使用周期</th>
+                                  <th><i class="icon-question-sign"></i> 流量类型</th>
+                                  <th><i class="icon-reorder"></i> 订购类型</th>
                                   <th><i class="icon-bookmark"></i> 创建时间</th>
-                                  <th><i class=" icon-edit"></i> 账号状态</th>
-                                  <th>操作</th>
+                                  <th><i class=" icon-edit"></i> 商品状态</th>
+                                  <th><i class=" icon-edit"> 操作 </th>
                               </tr>
                               </thead>
                               <tbody>
                               <if condition="!empty($data) and is_array($data)">
                               <volist name="data" id="admin">
                               <tr>
+                                 
                                   <td><a href="#"><{$admin.name}></a></td>
-                                  <td class="hidden-phone"><{$admin.nickname}></td>
+                                  <td class="hidden-phone"><{$admin.alias_name}></td>
+                                  <td class="hidden-phone"><{$admin.goods_range}></td>
+                                  <td class="hidden-phone"><{$admin.recharge_limit}></td>
+                                  <td class="hidden-phone"><{$admin.operator}></td>
+                                  <td class="hidden-phone"><{$admin.bag_size}></td>
+                                  <td class="hidden-phone"><{$admin.use_cycle}></td>
+                                  <td class="hidden-phone"><{$admin.flow_type}></td>
+                                  <td class="hidden-phone"><{$admin.order_type}></td>
+                                  
+                                  
                                   <td><{$admin.create_time|date="Y-m-d H:i:s",###}></td>
+                                  
                                   <if condition="1 eq $admin['status']">
                                   <td><span class="btn btn-default btn-sm">禁用</span></td>
                                   </if>
@@ -50,14 +68,14 @@
                                   <td><span class="btn btn-success  btn-sm">正常</span></td>
                                   </if>
                                   <td>
-                                  <a class="btn btn-primary btn-xs" href="/Admin/Admin/updates/userId/<{$admin.id}>">修改密码</a>
+                                  <a class="btn btn-primary btn-xs" href="/Admin/Goods/updates/goodsId/<{$admin.id}>">修改</a>
                                   <a  class="btn btn-xs btn-warning myModal2" data-toggle="modal" href="#myModal2" value="<{$admin.id}>">删除</a>
                                   </td>
                               </tr>
                               </volist>
                               <else />
                               
-                              <tr><td colspan="5">没有数据</td></tr>
+                              <tr><td colspan="12">没有数据</td></tr>
                               
                               </if>
                               </tbody>
@@ -112,8 +130,8 @@
               $("#myModal2").css('display','none'); 
               $("#myModal2").removeClass("in"); 
               $("body").removeClass("modal-open");
-                var userId = $(this).attr("value");
-                  $.post("/Admin/Admin/doDelete",{userId:userId},function(data,textStatus, jqXHR){
+                var goodsId = $(this).attr("value");
+                  $.post("/Admin/Goods/doDelete",{goodsId:goodsId},function(data,textStatus, jqXHR){
                     
                     if (data) {
                         $("#reback_message").text("删除成功");
