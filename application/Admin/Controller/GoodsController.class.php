@@ -26,7 +26,7 @@ class GoodsController extends AdminBaseController {
         $this->assign('data',$tData);
         $this->assign('count',$tCount);
         $this->assign('currentPage',$tPage);
-        
+        $this->assign('page',$show);
         $this->display();
     }
 
@@ -60,6 +60,8 @@ class GoodsController extends AdminBaseController {
         }
         $data['create_time'] = time();
         $data['create_ip'] = get_client_ip();
+
+        
         $addresult = $this->goodsService->add($data);
         if ($addresult) {
             $this->success('添加成功','/Admin/Goods/index',2);

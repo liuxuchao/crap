@@ -100,9 +100,9 @@
              <span>下游供货商管理</span>
             </a>
             <ul class="sub  dcjq-parent-li">
-              <li <?php if('index' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/index" >下游供货商列表</a></li>
-  			      <li <?php if('index' == $actionName and 'Supplier' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
-              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/getGivingLog" >产品分类</a></li>
+              <li <?php if('index' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Users/index" >供货商列表</a></li>
+  			      <li <?php if('index' == $actionName and 'Supplier' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Users">供货商接口列表</a></li>
+              <li <?php if('index' == $actionName and 'Supplier' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Users">供货商接口分类列表</a></li>
             </ul>
           </li>
           <li class="sub-menu  dcjq-parent-li">
@@ -111,8 +111,8 @@
               <span>商品管理</span>
             </a>
             <ul class="sub">
-              <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">产品列表</a></li>
-              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods/getGivingLog" >产品分类</a></li>
+              <li <?php if('index' == $actionName and 'Goods' == $controllerName): ?>class="active"<?php endif; ?>><a href="/Admin/Goods">商品列表</a></li>
+              <li <?php if('discountList' == $actionName): ?>class="active"<?php endif; ?>><a href="/Admin/Category/" >商品分类</a></li>
             </ul>
           </li>
 		      <li class="sub-menu  dcjq-parent-li">

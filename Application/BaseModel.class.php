@@ -96,7 +96,7 @@ abstract class BaseModel extends Model
      * @param int $primaryKey 主键的值
      * @return boolean | array
      */
-    public function getByPrimaryKey( $primaryKey )
+    public function getByPrimaryKey( $primaryKey)
     {
         $primaryKey = intval($primaryKey);
         if ( 0 >= $primaryKey ) {
